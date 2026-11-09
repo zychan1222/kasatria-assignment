@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Kasatria Assignment - People Table</title>
+	<link rel="stylesheet" href="style.css">
+
+	<script type="importmap">
+		{
+			"imports": {
+				"three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+				"three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+			}
+		}
+	</script>
+</head>
+<body>
+
+	<!-- Login screen (Image A) -->
+	<main id="login">
+		<div class="login-card">
+			<h1>Welcome Back</h1>
+			<p>Sign in with your Google account to view the 3D people table.</p>
+			<div id="googleButton"></div>
+			<p id="loginError" class="error" hidden></p>
+		</div>
+	</main>
+
+	<!-- 3D app -->
+	<div id="app" hidden>
+		<div id="container"></div>
+
+		<div id="user">
+			<span id="userName"></span>
+			<button id="signOut">SIGN OUT</button>
+		</div>
+
+		<div id="status">Loading data...</div>
+
+		<div id="menu">
+			<button id="table">TABLE</button>
+			<button id="sphere">SPHERE</button>
+			<button id="helix">HELIX</button>
+			<button id="grid">GRID</button>
+
+			<div id="legend">
+				<span><i class="dot red"></i>&lt; $100K</span>
+				<span><i class="dot orange"></i>&gt; $100K</span>
+				<span><i class="dot green"></i>&gt; $200K</span>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://accounts.google.com/gsi/client" async defer></script>
+	<script type="module" src="main.js"></script>
+</body>
+</html>
