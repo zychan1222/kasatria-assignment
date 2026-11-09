@@ -7,4 +7,3 @@ export const CONFIG = {
  
 	SHEET_RANGE: "'Data Template'!A1:F201",
 };
- 
